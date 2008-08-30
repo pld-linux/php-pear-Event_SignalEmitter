@@ -6,16 +6,16 @@
 Summary:	%{_pearname} - Generic signal emitting class with the same API as GObject
 Summary(pl.UTF-8):	%{_pearname} - kompatybilna z GObject na poziomie API klasa do wysyłania sygnałów
 Name:		php-pear-%{_pearname}
-Version:	0.3.0
+Version:	0.3.1
 Release:	1
 License:	LGPL
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	e6cb9ce1ec1749af6d122486690df640
+# Source0-md5:	5f60a40b3d2b5a4343beaf1d781e05fc
 URL:		http://pear.php.net/package/Event_SignalEmitter/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
-Requires:	php-pear
+Requires:	php-pear >= 1.0-24
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -26,11 +26,12 @@ class provides a PHP implementation with the same API.
 
 In PEAR status of this package is: %{_status}.
 
-#%description -l pl.UTF-8
-#
-#...
-#
-#Ta klasa ma w PEAR status: %{_status}.
+%description -l pl.UTF-8
+Ogólna klasa do wysyłania sygnałów o API zgodnym z GObject. Jako, że
+GObject nie pozwala klasom na definiowanie lub wysyłania własnych
+sygnałów, klasa ta dostarcza implementacji PHP o takim samym API.
+
+Ta klasa ma w PEAR status: %{_status}.
 
 %prep
 %pear_package_setup
