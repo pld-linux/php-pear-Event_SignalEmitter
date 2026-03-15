@@ -6,7 +6,7 @@ Summary:	%{_pearname} - Generic signal emitting class with the same API as GObje
 Summary(pl.UTF-8):	%{_pearname} - kompatybilna z GObject na poziomie API klasa do wysyłania sygnałów
 Name:		php-pear-%{_pearname}
 Version:	0.3.2
-Release:	1
+Release:	2
 License:	LGPL
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
